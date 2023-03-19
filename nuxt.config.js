@@ -176,11 +176,7 @@ module.exports = {
         [
             'vue-sweetalert2/nuxt',
             {
-                confirmButtonColor: '#249ffd',
-                animation: false,
-                customClass: {
-                    popup: 'sweetalert2'
-                }
+                confirmButtonColor: '#249ffd'
             }
         ]
     ],

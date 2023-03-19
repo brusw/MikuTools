@@ -51,53 +51,6 @@ html {
     }
 }
 
-.sweetalert2{
-    animation: fadeIn .15s;
-    box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
-    input.swal2-input{
-        width: 100%;
-        height: auto;
-        padding: 10px 15px;
-        box-sizing: border-box;
-        border: 1px solid var(--border-color);
-        background-color: transparent;
-        color: var(--t1);
-        outline: none;
-        transition: border-color 0.2s ease;
-        box-shadow: none;
-        border-radius: 0;
-        font-size: 16px;
-        &[disabled='disabled'] {
-            opacity: 0.8;
-            cursor: no-drop;
-        }
-        &::placeholder {
-            color: rgb(158, 158, 158);
-        }
-        &:focus {
-            border-color: var(--theme);
-        }
-    }
-}
-.swal2-modal.tleft {
-    #swal2-content {
-        text-align: left;
-    }
-}
-div.swal2-container.swal2-shown {
-    background-color: rgba(0, 0, 0, 0.2);
-    animation: fadeIn .2s;
-}
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-  
-    to {
-      opacity: 1;
-    }
-}
-
 * {
     -webkit-tap-highlight-color: transparent;
 }
