@@ -7,7 +7,6 @@ export const state = () => ({
     inFrames: false,
     currentTool: null,
     disabledMouseWheel: false,
-    ads: true,
     loaded: false,
     setting: {
         animations: true,

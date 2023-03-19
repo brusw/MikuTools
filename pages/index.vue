@@ -38,7 +38,7 @@
             </template>
         </nya-container>
 
-        <template v-else v-show="!searchText">
+        <template v-else-if="!searchText">
             <nya-container
                 v-for="(item, index) in $store.state.tools"
                 v-show="!searchText && showSection(item)"
@@ -64,12 +64,7 @@
 
         <nya-container v-if="!$store.state.setting.hideNotice" v-show="!searchText" title="公告" icon="volume-down-outline">
             <ul class="nya-list">
-                <li>本项目基于 <a href="https://github.com/Ice-Hazymoon/MikuTools" target="_blank" rel="noopener noreferrer">MikuTools</a> 构建而成</li>
-                <li>
-                    <div class="badge-info">
-                        <span class="badge hot">热门</span> <span class="badge vip">VIP</span> <span class="badge new">新功能</span> <span class="badge recommend">推荐</span>
-                    </div>
-                </li>
+                <li>本项目基于 <a href="https://github.com/brusw/MikuTools" target="_blank" rel="noopener noreferrer">MikuTools</a> 构建而成</li>
                 <li><b>欢迎将本站收藏到收藏夹，以便以后使用</b></li>
                 <li>
                     本站域名：<a
@@ -86,12 +81,6 @@
 
         <nya-container v-if="!$store.state.setting.hidePay" v-show="!searchText" title="打赏" icon="credit-card-outline">
             <ul class="pay">
-                <li>
-                    <img src="../assets/qq.png" alt="qq">
-                    <div class="name">
-                        QQ
-                    </div>
-                </li>
                 <li>
                     <img src="../assets/weixin.png" alt="weixin">
                     <div class="name">

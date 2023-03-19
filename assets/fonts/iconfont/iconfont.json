@@ -1,0 +1,30 @@
+{
+  "id": "3959874",
+  "name": "MikuTools",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "809949",
+      "name": "email",
+      "font_class": "email",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "1469225",
+      "name": "github",
+      "font_class": "github",
+      "unicode": "e85a",
+      "unicode_decimal": 59482
+    },
+    {
+      "icon_id": "8549841",
+      "name": "Semantic Web",
+      "font_class": "website",
+      "unicode": "e749",
+      "unicode_decimal": 59209
+    }
+  ]
+}

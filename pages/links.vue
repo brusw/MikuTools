@@ -14,14 +14,15 @@
                             :href="list.link"
                             target="_blank"
                             rel="noopener noreferrer"
-                        >{{ list.link }}</a>
+                            v-html="list.tag ? list.tag : list.link"
+                        ></a>
                         <a v-else href="javascript:;">暂无网站</a>
                     </li>
                 </ul>
             </div>
             <div>
                 <div class="nya-subtitle">
-                    感谢以下项目(未全部列出)
+                    感谢以下项目
                 </div>
                 <ul class="nya-list">
                     <li v-for="(item, index) in project" :key="index">
@@ -46,41 +47,23 @@ export default {
             title: `友情链接 - ${process.env.title}`,
             links: [
                 {
-                    title: '主要维护人员',
+                    title: '网站基本信息',
                     list: [
                         {
-                            name: 'Ice-Hazymoon',
-                            description: '聆听最初的声音，向往无尽的未来',
-                            link: 'https://imiku.me'
+                            name: '我的个人主页',
+                            description: 'Bruce Wei 的博客',
+                            link: 'https://brucewei.com'
                         },
                         {
-                            name: 'KeJun',
-                            description: '维护人员',
-                            link: 'https://kejun.me/'
-                        },
-                        {
-                            name: 'Tamshen',
-                            description: '图标设计',
-                            link: 'http://tamshen.com'
-                        },
-                        {
-                            name: 'So',
-                            description: '不知道干啥的'
-                        }
-                    ]
-                },
-                {
-                    title: '其他',
-                    list: [
-                        {
-                            name: 'GitHub地址',
+                            name: 'GitHub 地址',
                             description: '给个 star 呗',
-                            link: 'https://github.com/Ice-Hazymoon/MikuTools'
+                            link: 'https://github.com/brusw/MikuTools'
                         },
                         {
-                            name: '服务器提供商（注册送 50 美元余额）',
-                            description: 'vultr',
-                            link: 'https://www.vultr.com/?ref=7943329-4F'
+                            name: '服务器提供商（新用户低至 1 折）',
+                            description: '腾讯云',
+                            link: 'https://url.cn/A79wtXZl',
+                            tag: '<p><img src="'+ require('~/assets/tencent-spread.jpg') +'" /></p>'
                         }
                     ]
                 }
@@ -121,6 +104,7 @@ export default {
                 'https://github.com/kaimallea/isMobile',
                 'https://github.com/axios/axios',
                 'https://github.com/daniellmb/console.style',
+                'https://github.com/Ice-Hazymoon/MikuTools',
                 'https://github.com/Ice-Hazymoon/telegram_sticker_downloader',
                 'https://github.com/Ice-Hazymoon/idcard_generator',
                 'https://github.com/brix/crypto-js',

@@ -1,6 +1,6 @@
 <template>
     <div class="gif_splitter">
-        <nya-container title="GIF 分解">
+        <nya-container title="GIF 图片分解">
             <div class="inputbtn">
                 <nya-input
                     v-model="n"

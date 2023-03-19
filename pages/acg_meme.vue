@@ -8,7 +8,7 @@
                 <img v-if="results" :src="results" alt="rbq">
             </modal>
         </client-only>
-        <nya-container title="ACG表情包制作">
+        <nya-container title="ACG 表情包制作">
             <nya-input
                 v-model.trim="text"
                 label="请输入文字内容"
@@ -94,7 +94,9 @@ if (process.browser) {
 export default {
     name: 'AcgMeme',
     head() {
-        return this.$store.state.currentTool.head;
+        return {
+            title: this.title
+        };
     },
     components: {
         'compact-picker': Compact,
@@ -102,6 +104,7 @@ export default {
     },
     data() {
         return {
+            title: `ACG 表情包制作 - ${process.env.title}`,
             cdnurl: '/acg_meme/',
             text: '啥百度啊',
             results: '',

@@ -28,7 +28,7 @@
                 </div>
             </modal>
         </client-only>
-        <nya-container title="前端CDN查询">
+        <nya-container title="前端 CDN 查询">
             <div class="inputbtn">
                 <nya-input
                     v-model.trim="query"

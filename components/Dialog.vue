@@ -29,7 +29,6 @@
                 @click.stop="click(i, $event)"
                 v-text="button.title"
             >
-                {{ button.title }}
             </button>
         </div>
         <div v-else class="vue-dialog-buttons-none"></div>

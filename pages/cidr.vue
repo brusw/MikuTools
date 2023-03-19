@@ -1,6 +1,6 @@
 <template>
     <div class="cidr">
-        <nya-container title="CIDR计算">
+        <nya-container title="CIDR 计算">
             <nya-input
                 v-model="CIDRValue"
                 label="输入CIDR地址(IPv4)"
@@ -39,6 +39,9 @@
 <script>
 export default {
     name: 'Cidr',
+    head() {
+        return this.$store.state.currentTool.head;
+    },
     data() {
         return {
             CIDRValue: '',

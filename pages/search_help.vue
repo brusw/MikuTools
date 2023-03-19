@@ -30,7 +30,7 @@
         
         <nya-container title="说明">
             <ul class="nya-list">
-                <li>沙雕网友问的问题太简单，不想回答？这个时候就可以使用这个工具教他百度啦ww</li>
+                <li>沙雕网友问的问题太简单，不想回答？这个时候就可以使用这个工具教他百度啦</li>
             </ul>
         </nya-container>
     </div>

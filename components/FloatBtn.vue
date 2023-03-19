@@ -12,7 +12,7 @@
                 <span></span>
             </li>
         </ul>
-        <div class="main" :title="collected ? '收藏本工具' : '取消收藏'" @click="collect">
+        <div class="main" :title="collected ? '取消收藏' : '收藏本工具'" @click="collect">
             <i v-if="collected" class="eva eva-star"></i>
             <i v-else class="eva eva-star-outline"></i>
         </div>
@@ -27,7 +27,7 @@
                 <div class="title">
                     请作者喝一杯咖啡？
                 </div>
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPkAAAD5AQMAAADfgQHTAAAABlBMVEX///8AAABVwtN+AAABKElEQVRo3u3YQRLCIAwF0HTFMTyqHpVjuGqEz29Sd0G3P+NgCW+VYSCtOeNtZo8crvRLgGD8DOljqaf7CTXjENgBo6xjmGu9eUzhBX4EvoZD4B+AiVGZwD5AOo/PMW3wyArsAAa2ag7MCtTBV7TTnh0FjhCoAtQ2DtJYm2p4gTpgc9RtdUhQyFEJVAFOTsS9yte5KrABvGNvtug6F7g2rUARxOXuZwwzopMXKIL5H7cRiw6xLieBKsjWna/j8FjDgkAZxJWOKnOYOWPlBaog3nry+HRGNxMog4wJkJ5+ThEvgSpwBvsiqCi6QBnk5X7/RIRSs38SKIOsLTJU8dlIYBvYCIDo35ET2AbYqli77iU8CZQB0ixw9Eq5hwXKgJFnaPP7y7pAEXwAEcs7OSsUWygAAAAASUVORK5CYII=" alt="pay">
+                <img src="~/assets/weixin.png" alt="pay">
             </modal>
             <modal class="phone" name="phone" height="auto" width="300" reset adaptive>
                 <div class="title">
@@ -41,11 +41,10 @@
                 </div>
                 <div class="list">
                     <a :href="`http://connect.qq.com/widget/shareqq/index.html?url=${shareData.url}&desc=${shareData.title}&pics=${shareData.pic}`" target="_blank" rel="noopener noreferrer">QQ</a>
-                    <a :href="`http://qr.liantu.com/api.php?text=${shareData.url}`" target="_blank" rel="noopener noreferrer">微信</a>
+                    <a :href="`https://api.qrserver.com/v1/create-qr-code/?data=${shareData.url}&margin=20`" target="_blank" rel="noopener noreferrer">微信</a>
                     <a :href="`http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${shareData.url}&title=${shareData.title}&pics${shareData.pic}=&summary=${shareData.content}`" target="_blank" rel="noopener noreferrer">QQ空间</a>
                     <a :href="`http://service.weibo.com/share/share.php?url=${shareData.url}&title=${shareData.title}&pic=${shareData.pic}&searchPic=false`" target="_blank" rel="noopener noreferrer">微博</a>
                     <a :href="`http://www.douban.com/share/service?href=${shareData.url}&name=${shareData.title}&text=${shareData.content}&image=${shareData.pic}`" target="_blank" rel="noopener noreferrer">豆瓣</a>
-                    <a :href="`http://widget.renren.com/dialog/share?resourceUrl=${shareData.url}&srcUrl=${shareData.url}&title=${shareData.title}&description=${shareData.content}`" target="_blank" rel="noopener noreferrer">人人</a>
                     <a :href="`https://twitter.com/intent/tweet?text=${shareData.title}&url=${shareData.url}`" target="_blank" rel="noopener noreferrer">Twitter</a>
                     <a :href="`https://www.facebook.com/sharer/sharer.php?u=${shareData.url}&t=${shareData.title}&pic=${shareData.pic}`" target="_blank" rel="noopener noreferrer">Facebook</a>
                     <a :href="`https://www.linkedin.com/shareArticle?title=${shareData.title}&summary=${shareData.content}&mini=true&url=${shareData.url}&ro=true`" target="_blank" rel="noopener noreferrer">Linkedin</a>

@@ -1,6 +1,6 @@
 <template>
     <div class="crontab">
-        <nya-container title="执行Cron表达式">
+        <nya-container title="执行 Cron 表达式">
             <nya-input
                 v-model.trim="content"
                 label="输入表达式"
@@ -28,7 +28,7 @@
 |    |    +--------------- day of month (1 - 31)
 |    +-------------------- hour (0 - 23)
 +------------------------- min (0 - 59)
-</code></pre>
+            </code></pre>
         </nya-container>
     </div>
 </template>

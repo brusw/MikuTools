@@ -1,6 +1,6 @@
 <template>
     <div class="anime4k">
-        <nya-container title="Anime4k">
+        <nya-container title="Anime 4K">
             <div class="inputbtn">
                 <nya-input v-model="txtSrc" label="请输入视频/图片地址" placeholder="https://..." />
                 <button type="button" class="nya-btn" @click="onSourceChanged">

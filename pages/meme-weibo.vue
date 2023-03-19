@@ -107,7 +107,7 @@ export default {
             renzheng: true,
             loading: false,
             n: '',
-            avatar: require('!file-loader!~/assets/avatar.jpg'),
+            avatar: require('~/assets/avatar.jpg'),
             vipList: {
                 none: '无',
                 icon_member1: 'vip1',

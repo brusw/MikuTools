@@ -1,7 +1,7 @@
 <template>
     <div class="panel" icon="person-outline">
         <div class="login-text">
-            <a href="https://github.com/Ice-Hazymoon/MikuTools" target="_blank" rel="noopener noreferrer">Powered by MikuTools</a>
+            Powered by <a href="https://brucewei.com" target="_blank" rel="noopener noreferrer">@brucewei</a>
         </div>
     </div>
 </template>

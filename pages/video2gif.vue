@@ -1,6 +1,6 @@
 <template>
     <div class="video2gif">
-        <nya-container title="视频转GIF">
+        <nya-container title="视频转 GIF">
             <div class="inputbtn">
                 <nya-input
                     v-model="n"

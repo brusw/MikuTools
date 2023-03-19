@@ -6,6 +6,7 @@ import keywords from './keywords';
 module.exports = {
     env: env,
     server: {
+        port: 8000,
         // https:
         //     process.env.NODE_ENV === 'development'
         //         ? {
@@ -48,7 +49,7 @@ module.exports = {
             {
                 hid: 'author',
                 name: 'author',
-                content: 'Ice-Hazymoon'
+                content: 'brusw'
             },
             {
                 name: 'HandheldFriendly',
@@ -187,7 +188,6 @@ module.exports = {
      ** Axios module configuration
      */
     axios: {
-        baseURL: env.axios,
         progress: false
         // See https://github.com/nuxt-community/axios-module#options
     },
@@ -221,15 +221,6 @@ module.exports = {
         scope: '/',
         lang: 'zh-cn'
     },
-    // workbox: {
-    //     runtimeCaching: [
-    //         {
-    //             urlPattern: 'https://mikutools.cdn.hazymoon.vip/.*'
-    //         }
-    //     ],
-    //     offlinePage: '/offline.html',
-    //     offlineAssets: ['/offline.html']
-    // },
     router: {
         prefetchLinks: false,
         middleware: ['getCurrentTool', 'baidupush']
