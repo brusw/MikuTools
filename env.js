@@ -7,7 +7,7 @@ export default {
     url:
         process.env.NODE_ENV === 'development'
             ? 'http://127.0.0.1:8000'
-            : 'https://tools.brusw.com/',
+            : 'https://tools.brusw.com',
     pinyin: pinyin,
     development: process.env.NODE_ENV === 'development'
 };

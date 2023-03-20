@@ -21,7 +21,6 @@ export default {
 };
 </script>
 
-
 <style lang="scss">
 .navbar {
     box-sizing: border-box;
