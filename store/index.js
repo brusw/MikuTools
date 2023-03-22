@@ -13,20 +13,16 @@ export const state = () => ({
         hide: [],
         favorites: [],
         hideCategory: false,
-        hidePay: false,
+        hidePay: true,
         hideNotice: false,
         css: '',
         js: '',
         inNewTab: null,
         bg: {
-            type: 'none',
-            upload: {
-                url: '',
-                deleteUrl: ''
-            },
-            customUrl: '',
-            blur: 4,
-            opacity: 50,
+            type: 'custom',
+            customUrl: process.env.background,
+            blur: 2,
+            opacity: 20,
             transparentEl: true
         }
     },

@@ -110,8 +110,6 @@ export default {
                         .substring(2);
             } else if (setting.type === 'custom') {
                 url = setting.customUrl;
-            } else if (setting.type === 'upload') {
-                url = setting.upload.url;
             } else url = '';
             return url;
         }

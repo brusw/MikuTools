@@ -9,5 +9,6 @@ export default {
             ? 'http://127.0.0.1:8000'
             : 'https://tools.brusw.com',
     pinyin: pinyin,
-    development: process.env.NODE_ENV === 'development'
+    development: process.env.NODE_ENV === 'development',
+    background: 'https://resource.brusw.com/background.jpg'
 };

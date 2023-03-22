@@ -9,7 +9,7 @@
             </nya-radio-group>
         </div>
 
-        <nya-input v-show="$store.state.setting.bg.type === 'custom'" :value="$store.state.setting.bg.customUrl" label="输入壁纸链接" :placeholder="`${$store.state.env.url}/icon.png`" autocomplete="off" fullwidth @change="handleChange('setting.bg.customUrl', $event.target.value)" @keyup.enter="handleChange('setting.bg.customUrl', $event.target.value)" />
+        <nya-input v-show="$store.state.setting.bg.type === 'custom'" :value="$store.state.setting.bg.customUrl" label="输入壁纸链接" :placeholder="`${$store.state.env.background}`" autocomplete="off" fullwidth @change="handleChange('setting.bg.customUrl', $event.target.value)" @keyup.enter="handleChange('setting.bg.customUrl', $event.target.value)" />
         <hr>
         <nya-checkbox :checked="$store.state.setting.bg.transparentEl" label="元素半透明" @change="handleChange('setting.bg.transparentEl', $event)" />
 
