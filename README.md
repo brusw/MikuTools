@@ -37,11 +37,11 @@ docker run --name=brusw-tools -p 8000:8000 -d brusw/tools
 
 ## 其他
 
-Q：我应该如何添加新功能？
-A：参考 `/pages/*.vue` 中的文件新建页面，善用 **CTRL+F** 进行相关模块的查找，然后在 `/tools/index.js` 里添加相关的工具信息。
-
-Q：MikuTools 的主要技术栈是什么？
+Q：MikuTools 的主要技术栈是什么？  
 A：Vue 全家桶 + [Nuxt.js](https://zh.nuxtjs.org/)。
+
+Q：我应该如何添加新功能？  
+A：参考 `/pages/*.vue` 中的文件新建页面，然后在 `/tools/index.js` 里添加相关的工具信息。
 
 ## License
 
