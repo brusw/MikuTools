@@ -61,7 +61,7 @@
                     <tr v-for="(item, index) in results.results" :key="index">
                         <td>{{ item.name }}</td>
                         <td class="latest">
-                            <div :title="catUrl(item.latest)" @click="viewAll(catUrl(item.latest))">
+                            <div v-if="item.latest" :title="catUrl(item.latest)" @click="viewAll(catUrl(item.latest))">
                                 {{ catUrl(item.latest) }}
                             </div>
                         </td>

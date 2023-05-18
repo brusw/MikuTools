@@ -51,7 +51,7 @@ export default {
                     list: [
                         {
                             name: '我的个人主页',
-                            description: 'Bruce Wei 的博客',
+                            description: 'Bruce Wei 的主页',
                             link: 'https://brucewei.com'
                         },
                         {

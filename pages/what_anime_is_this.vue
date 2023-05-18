@@ -22,27 +22,27 @@
         </nya-container>
 
         <nya-container
-            v-for="doc in docs"
-            :key="doc.index"
-            :title="doc.title_chinese+' EP#'+doc.episode"
+            v-for="(doc,index) in docs"
+            :key="index"
+            :title="doc.filename"
         >
             <table>
                 <tbody>
                     <tr>
-                        <td>匹配位置：</td>
-                        <td>{{ secToTime(doc.at) }}</td>
-                    </tr>
-                    <tr>
-                        <td>中文名称</td>
-                        <td>{{ doc.title_chinese }}</td>
+                        <td>匹配位置</td>
+                        <td>{{ secToTime(doc.from) }}</td>
                     </tr>
                     <tr>
                         <td>日文名称</td>
-                        <td>{{ doc.title_native }}</td>
+                        <td>{{ doc.anilist.title.native }}</td>
+                    </tr>
+                    <tr>
+                        <td>罗马名称</td>
+                        <td>{{ doc.anilist.title.romaji }}</td>
                     </tr>
                     <tr>
                         <td>英文名称</td>
-                        <td>{{ doc.title_english }}</td>
+                        <td>{{ doc.anilist.title.english }}</td>
                     </tr>
                     <tr>
                         <td>相似度</td>
@@ -50,11 +50,7 @@
                     </tr>
                     <tr>
                         <td colspan="2" style="text-align:center">
-                            <video
-                                controls
-                                loop
-                                :src="'https://trace.moe/preview.php?anilist_id='+doc.anilist_id+'&file='+encodeURIComponent(doc.filename)+'&t='+doc.at+'&token='+doc.tokenthumb"
-                            ></video>
+                            <video controls loop :src="doc.video"></video>
                         </td>
                     </tr>
                 </tbody>
@@ -86,7 +82,8 @@ export default {
             n: '',
             preview: '',
             docs: [],
-            loading: false
+            loading: false,
+            formData: null
         };
     },
     methods: {
@@ -110,6 +107,8 @@ export default {
                     'load',
                     () => {
                         this.preview = reader.result;
+                        this.formData = new FormData();
+                        this.formData.append('image', file);
                     },
                     false
                 );
@@ -120,20 +119,18 @@ export default {
             this.loading = true;
             this.$axios
                 .post(
-                    'https://trace.moe/api/search',
-                    {
-                        image: this.preview
-                    },
+                    'https://api.trace.moe/search?anilistInfo',
+                    this.formData,
                     {
                         headers: {
-                            'Content-Type': 'application/json'
+                            'Content-Type': 'multipart/form-data'
                         },
                         auth: false
                     }
                 )
                 .then(e => {
                     this.loading = false;
-                    this.docs = e.data.docs;
+                    this.docs = e.data.result;
                 })
                 .catch(err => {
                     this.$swal({
@@ -175,9 +172,8 @@ export default {
             if (this.loading) return false;
             this.loading = true;
             this.$axios
-                .post(
-                    'https://trace.moe/api/me',
-                    {},
+                .get(
+                    'https://api.trace.moe/me',
                     {
                         headers: {
                             'Content-Type': 'application/json'
@@ -191,8 +187,8 @@ export default {
                     this.$swal({
                         type: 'error',
                         title: '我的次数',
-                        text: `总次数剩余：${result.quota} 每分钟剩余：${
-                            result.limit
+                        text: `本月额度：${result.quota}，已使用：${
+                            result.quotaUsed
                         }`
                     });
                 })

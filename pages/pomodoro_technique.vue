@@ -156,9 +156,9 @@ export default {
         playMusic() {
             if (this.music) {
                 const audioSrc = {
-                    forest: require('!file-loader!~/assets/audio/white-noise/preset_wakeup_forest.m4a'),
-                    ocean: require('!file-loader!~/assets/audio/white-noise/preset_wakeup_ocean.m4a'),
-                    provence: require('!file-loader!~/assets/audio/white-noise/preset_wakeup_provence.m4a')
+                    forest: require('!file-loader!~/assets/audio/white-noise/preset_wakeup_forest.m4a').default,
+                    ocean: require('!file-loader!~/assets/audio/white-noise/preset_wakeup_ocean.m4a').default,
+                    provence: require('!file-loader!~/assets/audio/white-noise/preset_wakeup_provence.m4a').default
                 };
                 this.audio = new Audio();
                 this.audio.loop = true;
