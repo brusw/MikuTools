@@ -58,12 +58,16 @@ export default {
     },
     computed: {
         url() {
+            const k = Buffer.from(this.keyword).toString('base64');
             return `${process.env.url}/o/search_help?s=${
                 this.type
-            }&k=${Buffer.from(this.keyword).toString('base64')}`;
+            }&k=${this.base64url(k)}`;
         }
     },
     methods: {
+        base64url(k) {
+            return k.replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '');
+        },
         go() {
             if (this.loading) return false;
             if (this.keyword) {
