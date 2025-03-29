@@ -32,7 +32,7 @@ pnpm dev
 
 ```bash
 docker build -t brusw/tools .
-docker run --name=brusw-tools -p 8000:8000 -d brusw/tools
+docker run -d --name=brusw-tools -p 8000:8000 --restart=always brusw/tools
 ```
 
 ## 其他
